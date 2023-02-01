@@ -8,11 +8,16 @@ function generateRandomColor(){
         color += hexCodes[Math.floor(Math.random() * hexCodes.length)];
    }
 
+   return '#' + color;
 }
 
 function setRandomColors(){
     cols.forEach(col =>{
-        console.log(col);
+        const text = col.querySelector('h2');
+        const color = generateRandomColor();
+
+        text.textContent = color;
+        col.style.background = color;
     });
 }
 
