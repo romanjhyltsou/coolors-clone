@@ -4,6 +4,7 @@ document.addEventListener('keydown', event => {
     event.preventDefault();
     if(event.code.toLocaleLowerCase() === 'space'){
         setRandomColors();
+        document.querySelector('.spacebar').style.display = 'none';
     }
 });
 
